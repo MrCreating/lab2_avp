@@ -1,23 +1,23 @@
 public class Main {
     public static void main (String[] args) {
         System.out.println("=========== OPTIMISTIC ============");
-        optimistic(args);
+        optimistic();
         System.out.println("===================================");
 
         System.out.println("\n");
 
         System.out.println("=========== PESSIMISTIC ===========");
-        pessimistic(args);
+        pessimistic();
         System.out.println("===================================");
     }
 
-    public static void optimistic (String[] args) {
+    public static void optimistic () {
         TransactionalMapOptimistic<String, String> transactionalMap = new TransactionalMapOptimistic<>();
 
         test(transactionalMap);
     }
 
-    public static void pessimistic (String[] args) {
+    public static void pessimistic () {
         TransactionalMapPessimistic<String, String> transactionalMap = new TransactionalMapPessimistic<>();
 
         test(transactionalMap);
